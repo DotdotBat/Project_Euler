@@ -5,7 +5,7 @@
 import math
 
 def get_divisers(n:int)->set[int]:
-    higher_bound = 1+math.ceil(math.sqrt(n))
+    higher_bound = 1+math.isqrt(n)
     divisers = {1}
     if n == 2:
         return {1}
@@ -34,7 +34,7 @@ def is_prime(num:int)->bool:
         return False
     if num < biggest_checked_number_so_far:
         return num in primes_list
-    upper_bound = math.floor(math.sqrt(num))
+    upper_bound = math.isqrt(num)
     extend_primes_list_up_to(upper_bound)
     for prime in primes_list:
         if num % prime == 0:
