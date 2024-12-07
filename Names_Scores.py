@@ -8,7 +8,7 @@ to obtain a name score.
 What is the total of all the name scores in the file?
 """
 
-file = open(file="0022_names.txt", mode="r")
+file = open(file="attached_files/0022_names.txt", mode="r")
 data = file.read()
 names = data.split(",")
 for i, name in enumerate(names):
@@ -17,9 +17,7 @@ names.sort()
 
 
 
-def letter_value(letter):
-    return ord(letter) - ord("A") + 1
-
+from reusable_functions import letter_value
 
 
 def name_value(name):

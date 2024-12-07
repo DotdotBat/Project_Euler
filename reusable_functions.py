@@ -65,3 +65,6 @@ def get_digits(num:int)->list[int]:
         num= num//10
     digits.reverse()
     return digits
+
+def letter_value(letter:str):
+    return ord(letter.upper()) - ord("A") + 1
